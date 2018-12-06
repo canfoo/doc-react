@@ -1,2 +1,2 @@
-# doc-react
+## doc-react
 react componet on markdown 
