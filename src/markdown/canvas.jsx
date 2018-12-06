@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import marked from 'marked'
 import { transform } from 'babel-standalone'
+import { getComponent } from '../index'
 
 import Editor from '../editor'
 
 export default class Canvas extends React.Component {
   constructor(props) {
     super(props)
-
-    // console.log('name', this.props.name)
 
     this.playerId = `${parseInt(Math.random() * 1e9).toString(36)}`
     this.document = this.props.children.match(/([^]*)\n?(```[^]+```)/)
@@ -39,36 +38,24 @@ export default class Canvas extends React.Component {
   }
 
   renderSource(value) {
-    import('../../src').then(Element => {
-      const args = ['context', 'React', 'ReactDOM', 'Component']
-      const argv = [this, React, ReactDOM, Component]
-      for (const key in Element) {
-        args.push(key)
-        argv.push(Element[key])
-      }
+    const args = ['context', 'React', 'ReactDOM', 'Component']
+    const argv = [this, React, ReactDOM, Component]
+    const Element = getComponent()
+    for (const key in Element) {
+      args.push(key)
+      argv.push(Element[key])
+    }
+    const code = transform(`
+      ${value}
 
-      return {
-        args,
-        argv
-      }
-    }).then(({ args, argv }) => {
-      const code = transform(`
-        ${value}
+      ReactDOM.render(<${this.componentName} {...context.props} />, document.getElementById('${this.playerId}'))
+    `, {
+      presets: ["es2015", 'react']
+    }).code
+    args.push(code)
 
-        ReactDOM.render(<${this.componentName} {...context.props} />, document.getElementById('${this.playerId}'))
-      `, {
-        presets: ["es2015", 'react']
-      }).code
-      args.push(code)
-
-      new Function(...args).apply(null, argv)
-
-      this.source[2] = value
-    }).catch((err) => {
-      if (process.env.NODE_ENV !== 'production') {
-        throw err;
-      }
-    })
+    new Function(...args).apply(null, argv)
+    this.source[2] = value
   }
 
   render() {

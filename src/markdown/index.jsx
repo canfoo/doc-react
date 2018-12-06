@@ -53,9 +53,11 @@ export default class Markdown extends React.Component {
       }), { renderer: this.renderer });
       // console.log('html', html)
       return (
-        <div dangerouslySetInnerHTML={{
-          __html: html
-        }} />
+        <div className="content">
+          <div dangerouslySetInnerHTML={{
+            __html: html
+          }} />
+        </div>
       )
     } else {
       return <span />
