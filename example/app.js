@@ -3,7 +3,8 @@ import Tooltip from 'rc-tooltip'
 import 'rc-tooltip/assets/bootstrap_white.css'
 
 import toolipMd from './docs/tooltip.md'
-import docReact from '../src';
+// import docReact from '../src'
+import docReact from '../dist'
 import './app.css'
 
 const Doc = docReact({ Tooltip }, toolipMd)
