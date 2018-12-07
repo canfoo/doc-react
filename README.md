@@ -39,6 +39,6 @@ tooltip.md 部分代码
 
 渲染出
 
-<img src="./assests/x.jpg" width: 550px />
+<img src="./assests/x.jpg" width="550" />
 
 详细demo：[https://github.com/canfoo/doc-react/blob/master/example/app.js](https://github.com/canfoo/doc-react/blob/master/example/app.js)
