@@ -35,7 +35,7 @@ const Home = () => <div><Doc /></div>;
 
 tooltip.md 部分代码
 
-<img src="./assests/e-md.jpg" style="width: 450px" />
+<img src="./assests/e-md.jpg" style="max-width: 350px" />
 
 渲染出
 
