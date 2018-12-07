@@ -64,6 +64,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  externals: [nodeExternals()],
+  // externals: [nodeExternals({
+  //   whitelist: ['CodeMirror', 'prop-types', 'marked', 'babel-standalone', 'prismjs']
+  // })],
   devtool: 'cheap-module-source-map'
 }
