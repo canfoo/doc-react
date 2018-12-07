@@ -306,6 +306,9 @@ body {
     overflow: hidden;
     background-color: #f9fafc;
     border-top: solid 1px #eaeefb;
+    .editor {
+      background: #FFF;
+    }
   }
 
   .highlight {
@@ -314,16 +317,20 @@ body {
   }
 
   .description {
-    float: right;
     padding: 18px 24px;
-    width: 270px;
     font-size: 14px;
     line-height: 1.8;
     color: #5e6d82;
-    margin-left: -1px;
     word-break: break-word;
     box-sizing: border-box;
-    border-left: 1px solid #eaeefb;
+    border-bottom: 1px solid #eaeefb;
+    background: #FFF;
+    position: relative;
+    img {
+      position: absolute;
+      width: 20px;
+      left: -20px;
+    }
 
     p {
       margin: 0;
@@ -355,6 +362,15 @@ body {
     transition: .2s;
     position: relative;
 
+    .block-icon {
+      width: 20px;
+      margin-top: 8px;
+      &:hover {
+        width: 22px;
+        margin-top: 7px;
+      }
+    }
+
     i {
       font-size: 12px;
       line-height: 36px;
@@ -363,17 +379,14 @@ body {
 
     span {
       display: inline-block;
-      transform: translateX(40px);
+      // transform: translateX(40px);
       font-size: 14px;
       line-height: 36px;
       transition: .3s;
-      opacity: 0;
+      // opacity: 0;
     }
-
-    &:hover {
-      color: #20a0ff;
-      background-color: #f9fafc;
-    }
+    // color: #20a0ff;
+    // background-color: #f9fafc;
   }
 
   .demo-block-control:hover {

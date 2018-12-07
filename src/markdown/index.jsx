@@ -37,7 +37,7 @@ export default class Markdown extends React.Component {
   }
 
   render() {
-    const document = this.document(localStorage.getItem('ELEMENT_LANGUAGE') || 'zh-CN');
+    const document = this.document();
 
     if (typeof document === 'string') {
       this.components.clear();
@@ -51,7 +51,6 @@ export default class Markdown extends React.Component {
 
         return `<div id=${id}></div>`;
       }), { renderer: this.renderer });
-      // console.log('html', html)
       return (
         <div className="content">
           <div dangerouslySetInnerHTML={{

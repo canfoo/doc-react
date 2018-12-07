@@ -62,34 +62,37 @@ export default class Canvas extends React.Component {
     return (
       <div className={`demo-block demo-box demo-${this.props.name}`}>
         <div className="source" id={this.playerId} />
-        {
-          this.state.showBlock && (
-            <div className="meta">
-              {
-                this.description && (
-                  <div
-                    ref="description"
-                    className="description"
-                    dangerouslySetInnerHTML={{ __html: this.description }}
-                  />
-                )
-              }
+        <div className="meta">
+          {
+            this.description && (
+              <div className="description">
+                <div
+                  ref="description"
+                  dangerouslySetInnerHTML={{ __html: this.description }}
+                />
+              </div>
+            )
+          }
+          {
+            this.state.showBlock && (
               <Editor
                 value={this.source[2]}
                 onChange={code => this.renderSource(code)}
               />
-            </div>
-          )
-        }
+            )
+          }
+        </div>
         <div className="demo-block-control" onClick={this.blockControl.bind(this)}>
           {
             this.state.showBlock ? (
               <span>
-                <i className="el-icon-caret-top" />{this.props.locale.hide}
+                {/* <i className="el-icon-caret-top" />隐藏代码 */}
+                <img className="block-icon" src={require('../assests/cc-close-square.png')} alt="open" />
               </span>
             ) : (
               <span>
-                <i className="el-icon-caret-bottom" />{this.props.locale.show}
+                {/* <i className="el-icon-caret-bottom" />显示代码 */}
+                <img className="block-icon" src={require('../assests/open.png')} alt="open" />
               </span>
             )
           }

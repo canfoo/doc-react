@@ -63,7 +63,7 @@ new WebpackDevServer(webpack({
   historyApiFallback: true,
   stats: { colors: true }
 }).listen(port, 'localhost', error => {
-  console.log(`server run localhost:${port}`)
+  console.log(`server run on localhost:${port}`)
   if (error) {
     throw error;
   }
