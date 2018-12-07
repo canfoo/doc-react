@@ -52,7 +52,7 @@ export default class Markdown extends React.Component {
         return `<div id=${id}></div>`;
       }), { renderer: this.renderer });
       return (
-        <div className="content">
+        <div className="dr-content">
           <div dangerouslySetInnerHTML={{
             __html: html
           }} />
