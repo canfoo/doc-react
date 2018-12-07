@@ -1,4 +1,6 @@
 build
-tests
-site
+example
+npm-debug.log
+node_modules
+jsconfig.json
 .*
