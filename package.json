@@ -1,8 +1,8 @@
 {
   "name": "doc-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react component of markdown",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "cd example && node run.js",
     "build": "webpack --config ./build/webpack.build.js"
