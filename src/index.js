@@ -5,7 +5,7 @@ import './styles/prism.css'
 let components = {}
 
 export default (cs, md) => {
-  components = cs
+  components = {...cs, ...components}
   return class Doc extends Markdown {
     document() {
       return md;
