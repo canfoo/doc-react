@@ -6,12 +6,11 @@ const nodeExternals = require('webpack-node-externals');
 
 const plugins = [
   new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': '"production"'
-    }
-  }),
-  new UglifyJsPlugin()
+  // new webpack.DefinePlugin({
+  //   'process.env': {
+  //     'NODE_ENV': '"production"'
+  //   }
+  // }),
 ]
 
 // if (process.env.ENV === 'pack-analysis') {
@@ -64,8 +63,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  // externals: [nodeExternals({
-  //   whitelist: ['CodeMirror', 'prop-types', 'marked', 'babel-standalone', 'prismjs']
-  // })],
-  devtool: 'cheap-module-source-map'
+  externals : {
+    'react': 'React',
+    'react-dom': 'ReactDOM'
+  }
 }
