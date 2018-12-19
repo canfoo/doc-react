@@ -174,22 +174,38 @@ body {
 
 .dr-content {
   vertical-align: top;
-
+  color: #24292e;
+  h1 {
+    font-size: 2em;
+  }
   h2 {
-    font-size: 28px;
-    color: #1f2d3d;
-    margin: 0;
+    font-size: 1.5em;
   }
-
   h3 {
-    font-size: 22px;
-    margin: 45px 0 15px;
+    font-size: 1.25em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h5 {
+    font-size: .875em;
+  }
+  h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    margin-top: 24px;
   }
 
-  h2, h3, h4, h5 {
-    font-weight: normal;
-    color: #1f2f3d;
+  ul, ol {
+    padding-left: 2em;
+    margin-bottom: 16px;
+    li {
+      margin-top: .25em;
+    }
   }
+
+
 
   pre {
     // background-color: transparent;

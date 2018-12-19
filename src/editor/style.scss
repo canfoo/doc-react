@@ -1,13 +1,13 @@
 .CodeMirror {
   font-family: 'source-code-pro', Menlo, 'Courier New', Consolas, monospace;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 20px;
   color: #484848;
   padding: 15px 0;
   border-right: 1px solid #eaeefb;
   z-index: 0;
   height: auto;
-  background: transparent;
+  background: #f6f8fa;
 
   .CodeMirror-gutters {
     background: transparent;

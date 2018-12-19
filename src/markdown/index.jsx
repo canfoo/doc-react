@@ -33,7 +33,7 @@ export default class Markdown extends React.Component {
         ReactDOM.render(component, div);
       }
     }
-    prism.highlightAll();
+    prism.highlightAll(this.refs.node);
   }
 
   render() {
@@ -52,7 +52,7 @@ export default class Markdown extends React.Component {
         return `<div id=${id}></div>`;
       }), { renderer: this.renderer });
       return (
-        <div className="dr-content">
+        <div className="dr-content dr-markdown" ref="node">
           <div dangerouslySetInnerHTML={{
             __html: html
           }} />
