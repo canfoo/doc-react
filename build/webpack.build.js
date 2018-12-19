@@ -63,5 +63,6 @@ module.exports = {
   plugins,
   resolve: {
     extensions: ['.js', '.jsx']
-  }
+  },
+  externals: [nodeExternals()]
 }
