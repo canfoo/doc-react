@@ -1,21 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
+const UglifyJS = require("uglify-js");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const nodeExternals = require('webpack-node-externals');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const plugins = [
   new webpack.optimize.OccurrenceOrderPlugin(),
-  // new webpack.DefinePlugin({
-  //   'process.env': {
-  //     'NODE_ENV': '"production"'
-  //   }
-  // }),
+  new UglifyJsPlugin({
+    uglifyOptions: {
+      output: {
+        ascii_only: true
+      }
+    }
+  })
 ]
-
-// if (process.env.ENV === 'pack-analysis') {
-//   plugins.push(new BundleAnalyzerPlugin())
-// }
 
 module.exports = {
   entry: path.resolve(__dirname, '../src/index.js'),
