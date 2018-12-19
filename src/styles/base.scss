@@ -204,8 +204,13 @@ body {
       margin-top: .25em;
     }
   }
-
-
+  a {
+    color: #0366d6;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   pre {
     // background-color: transparent;
@@ -230,12 +235,12 @@ body {
     th {
       text-align: left;
       border-top: 1px solid #eaeefb;
-      background-color: #EFF2F7;
+      background-color: #f6f8fa;
       white-space: nowrap;
     }
 
     td, th {
-      border-bottom: 1px solid #eaeefb;
+      border: 1px solid #eaeefb;
       padding: 10px;
       max-width: 250px;
     }
