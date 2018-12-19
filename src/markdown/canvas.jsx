@@ -49,7 +49,8 @@ export default class Canvas extends React.Component {
 
       ReactDOM.render(<${this.componentName} {...context.props} />, document.getElementById('${this.playerId}'))
     `, {
-      presets: ["es2015", 'react']
+      presets: ["es2015", 'react'],
+      plugins: ["transform-es2015-modules-umd"]
     }).code
     args.push(code)
 

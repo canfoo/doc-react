@@ -31,6 +31,8 @@ npm install aaa --save
 
 ```js
 
+let kooltip = require('./test.js')
+
 class Test extends Component {
   render() {
     return (
