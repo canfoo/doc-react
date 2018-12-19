@@ -1,11 +1,12 @@
 {
   "name": "doc-react",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "react component of markdown",
   "main": "dist/index.js",
   "scripts": {
     "start": "cd example && node run.js",
-    "build": "webpack --config ./build/webpack.build.js"
+    "build": "webpack --config ./build/webpack.build.js",
+    "dr": "webpack --config ./build/webpack.dr.js"
   },
   "repository": {
     "type": "git",

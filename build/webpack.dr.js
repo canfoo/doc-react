@@ -6,12 +6,11 @@ const nodeExternals = require('webpack-node-externals');
 
 const plugins = [
   new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': '"production"'
-    }
-  }),
-  new UglifyJsPlugin()
+  // new webpack.DefinePlugin({
+  //   'process.env': {
+  //     'NODE_ENV': '"production"'
+  //   }
+  // }),
 ]
 
 // if (process.env.ENV === 'pack-analysis') {
@@ -21,7 +20,7 @@ const plugins = [
 module.exports = {
   entry: path.resolve(__dirname, '../src/index.js'),
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../dr'),
     filename: 'index.js',
     library: 'DocReact',
     libraryTarget: 'umd',
@@ -63,5 +62,9 @@ module.exports = {
   plugins,
   resolve: {
     extensions: ['.js', '.jsx']
+  },
+  externals : {
+    'react': 'React',
+    'react-dom': 'ReactDOM'
   }
 }
