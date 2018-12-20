@@ -1,6 +1,6 @@
 {
   "name": "doc-react",
-  "version": "0.0.13",
+  "version": "0.0.13-beta",
   "description": "react component of markdown",
   "main": "dist/index.js",
   "scripts": {
