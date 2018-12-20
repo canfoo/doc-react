@@ -198,8 +198,10 @@ body {
   }
 
   ul, ol {
+    font-size: 14px;
     padding-left: 2em;
     margin-bottom: 16px;
+    list-style: initial;
     li {
       margin-top: .25em;
     }
