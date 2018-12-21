@@ -214,6 +214,18 @@ body {
     }
   }
 
+  .source {
+    ul, ol {
+      font-size: initial;
+      padding-left: 0px;
+      margin-bottom: 0px;
+      list-style: initial;
+      li {
+        margin-top: 0px;
+      }
+    }
+  }
+
   pre {
     // background-color: transparent;
     // padding: 18px 24px;
