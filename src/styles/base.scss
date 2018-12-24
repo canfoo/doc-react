@@ -216,12 +216,13 @@ body {
 
   .source {
     ul, ol {
-      font-size: initial;
+      font-size: 14px;
       padding-left: 0px;
       margin-bottom: 0px;
-      list-style: initial;
+      list-style: none;
       li {
         margin-top: 0px;
+        list-style: none;
       }
     }
   }
