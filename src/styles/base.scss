@@ -215,6 +215,11 @@ body {
   }
 
   .source {
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
     ul, ol {
       font-size: 14px;
       padding-left: 0px;
