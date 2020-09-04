@@ -72,7 +72,7 @@
     "babel-standalone": "^6.26.0",
     "prismjs": "^1.15.0",
     "codemirror": "^5.37.0",
-    "marked": "^0.5.1",
+    "marked": "^1.1.1",
     "async-validator": "^1.8.5",
     "classnames": "^2.2.6",
     "icheck": "^1.0.2",
